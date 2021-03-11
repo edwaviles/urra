@@ -1,0 +1,50 @@
+[
+    {
+        "img":"pd1.png",
+        "fecha":"Enero 22 2019",
+        "ganadores":{
+           "comprador":{
+               "foto":"1.png",
+               "nombre":"Adriana",
+               "ganado":"$100.00"
+           },
+           "viajero":{
+                "foto":"2.png",
+                "nombre":"Adriana",
+                "ganado":"$100.00"
+            } 
+        }
+    },
+    {
+        "img":"pd2.png",
+        "fecha":"Enero 22 2019",
+        "ganadores":{
+           "comprador":{
+               "foto":"3.png",
+               "nombre":"Adriana",
+               "ganado":"$100.00"
+           },
+           "viajero":{
+                "foto":"4.png",
+                "nombre":"Adriana",
+                "ganado":"$100.00"
+            } 
+        }
+    },
+    {
+        "img":"pd3.png",
+        "fecha":"Enero 22 2019",
+        "ganadores":{
+           "comprador":{
+               "foto":"5.png",
+               "nombre":"Adriana",
+               "ganado":"$100.00"
+           },
+           "viajero":{
+                "foto":"6.png",
+                "nombre":"Adriana",
+                "ganado":"$100.00"
+            } 
+        }
+    } 
+]

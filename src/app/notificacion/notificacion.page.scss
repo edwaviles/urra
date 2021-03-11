@@ -1,0 +1,48 @@
+ion-content{
+    p{
+        text-align: center;
+        margin-top: 50px;
+    }
+    .fondo{
+        width: 100%;
+    }
+    p.titulo {
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 28px;
+        line-height: 35px;
+        text-align: center;
+        color: #0A0454;
+        padding: 0 10%;
+    }
+    p.sub {
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 29px;
+        text-align: center;
+        color: #0A0454;
+        margin-top: 0px!important;
+        padding: 0 10%;
+    }
+}
+
+
+ion-footer{
+    background: #FC2A6E;
+    padding: 50px 20px ;
+    *{
+        text-align: center;
+    }
+    p.copy {
+        font-family: Nunito;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+}

@@ -11,6 +11,14 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'notificacion',
+    loadChildren: () => import('./notificacion/notificacion.module').then( m => m.NotificacionPageModule)
+  },
+  {
+    path: 'video',
+    loadChildren: () => import('./video/video.module').then( m => m.VideoPageModule)
+  },
 ];
 
 @NgModule({
