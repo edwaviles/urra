@@ -1,0 +1,399 @@
+// VARIABLES
+$gris:#8A8995;
+$gris_claro:#c0c0c075;
+$fuente:Nunito;
+$tamano1:16px;
+$blanco:#FFFFFF;
+$morado:#0A0454;
+$fondo1:#F9F9FA;
+
+
+// Estilo
+ion-row.headersUrra {
+  padding: 0% 10%;
+  nav.nav-1 {
+    border-right: 1px solid $gris_claro;
+  }
+  nav.nav-1, nav.nav-2 {
+    display: flex;
+    height: 100%;
+    .elperfil ion-avatar{
+      width: 50px;  
+      height: 50px;
+    }
+    a{
+      margin: auto;
+      font-family: $fuente;
+      font-style: normal;
+      font-weight: bold;
+      font-size: $tamano1;
+      line-height: 22px;
+      text-align: center;
+      color: $gris;
+      text-decoration: none;
+    }
+  }
+
+  .imgLogo {
+    display: flex;
+    img{
+      margin: auto auto auto 0;
+    }
+  }
+}
+
+
+ion-content{
+  #container{
+    .bannerUrra{
+      background: url(../../assets/pages/home/banner.png);
+      height: 650px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      p.titulo{
+        font-family: $fuente;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 60px;
+        line-height: 63px;
+        text-align: center;
+        color: $morado;
+        margin-bottom: 0px;
+      }
+      p.desc{
+        font-family: $fuente;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 20px;
+        line-height: 29px;
+        text-align: center;
+        color: $morado;
+      }
+      p.buscador {
+        text-align: center;
+        input#buscador{
+          background: $blanco;
+          border: 1px solid #E8E7EA;
+          box-sizing: border-box;
+          border-radius: 41px;
+          width: 500px;
+          height: 40px;
+          padding-left: 10px;
+        }
+        input#buscador::placeholder{
+          font-family: $fuente;
+          font-style: normal;
+          font-weight: normal;
+          font-size: $tamano1;
+          line-height: 21px;
+          display: flex;
+          align-items: center;
+          color: $gris;
+        }
+      }
+      p.accion {
+        text-align: center;
+        display: flex;
+        .btn_btnCrear{
+          background: linear-gradient(268.04deg, #FFD014 -24.25%, #FEAF26 5.16%, #FD5B54 69.9%, #FC2A6E 110.91%);
+          border-radius: 37px;
+          font-family: $fuente;
+          font-style: normal;
+          font-weight: bold;
+          font-size: $tamano1;
+          line-height: 24px;
+          padding: 5px 35px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          color: $blanco;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
+.seccionTitle{
+  font-family: $fuente;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 41px;
+  text-align: center;
+  color: $morado;
+  margin-bottom: 0px;
+}
+
+.seccionSub{
+  font-family: $fuente;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $tamano1;
+  line-height: 24px;
+  text-align: center;
+  color: $gris;
+}
+
+.producto{
+  background: $blanco;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  .img{
+    height: 200px;
+    background-repeat: no-repeat!important;
+    background-position: center!important;
+    display: flex;
+    img{
+      margin: auto auto 20px auto;
+    }
+  }
+  .ganador{
+    .avatar{
+      display: flex!important;
+      text-align: center;
+      ion-avatar{
+        width: 100px;
+        max-width: 100%;
+        margin: auto!important;
+        height: auto;
+        img{
+          height: auto!important;
+          max-height: 100%;
+        }
+      }
+    }
+    .nombre{
+      font-family: $fuente;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $tamano1;
+      line-height: 21px;
+      text-align: center;
+      color: $gris;
+    }
+    .premio{
+      font-family: $fuente;
+      font-style: normal;
+      font-weight: bold;
+      font-size: $tamano1;
+      line-height: 24px;
+      text-align: center;
+      color: $morado;
+      margin: 0px;
+    }
+  }
+  .fecha{
+    font-family: $fuente;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 19px;
+    color: $morado;
+    text-align: center;
+  }
+  
+}
+
+.funcionamiento{
+  padding: 0% 10% 0% 10%;
+  .video{
+    height: 500px;
+    background: url(../../assets/pages/home/video.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    margin-bottom: 50px;
+    img{
+      margin: auto;
+    }
+  }
+
+  .paso{
+    margin-top: -100px;
+    .img{
+      padding: 50px;
+    }
+    .info{
+      display: flex;
+      padding: 20px;
+      div{
+        width: 100%!important;
+        margin: auto;
+      }
+      .n button{
+        background: linear-gradient(267.29deg, #FFD014 -18.77%, #FD9D31 22.58%, #F93B6A 95.63%);
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        font-size: 40px;
+      }
+    }
+    .seccionTitle, .seccionSub{
+      text-align: left!important;
+      margin: 0px!important;
+    }
+  }
+
+  .btnGrande{
+    background: linear-gradient(268.04deg, #FFD014 -24.25%, #FEAF26 5.16%, #FD5B54 69.9%, #FC2A6E 110.91%);
+    border-radius: 37px;
+    width: 450px;
+    height: 60px;
+    font-family: $fuente;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 28px;
+    color: $blanco;
+  }
+}
+
+.ProductosBuscados{
+  padding: 0% 8% 0% 8%;
+  background: $fondo1;
+  .buscados{
+    .buscado{
+      padding: 10px;
+      div.contenedor{
+        box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.07);
+        border-radius: 10px;
+        padding: 15px;
+      }
+      .img{
+        display: flex;
+        height: 220px;
+        img{
+          margin: auto;
+          max-width: 100%;
+          max-height: 100%;
+        }
+      }
+      p{
+        text-align: left!important;
+      }
+      p.seccionSub{
+        min-height: 150px;
+      }
+      .btn {
+        display: flex;
+        
+        a{
+          border: 1px solid #FC2A6E;
+          border-radius: 37px;
+          font-family: $fuente;
+          font-style: normal;
+          font-weight: bold;
+          font-size: $tamano1;
+          line-height: 22px;
+          color: #FC2A6E;
+          text-decoration: none;
+          padding: 10px 50px;
+          margin: auto;
+        }
+      }
+    }
+  }
+}
+
+.ultimosPedidos{
+  padding: 20px;
+}
+[_nghost-xnv-c132] .carousel-cells .carousel-cell img, [_nghost-xnv-c132] .carousel-cells .carousel-cell video{
+  width: auto!important;
+  height: auto!important;
+}
+
+.beneficios{
+  background: $fondo1;
+  padding: 2% 8% 2% 8%;
+  .beneficio{
+    padding: 10px 35px 10px 35px;
+    .img{
+      margin-bottom: 0px!important
+    }
+    .elBeneficio{
+      font-family: $fuente;
+      font-style: normal;
+      font-weight: bold;
+      font-size: $tamano1;
+      line-height: 24px;
+      color: $morado;
+      margin: 5px;
+    }
+    .Descripcion{
+      font-family: $fuente;
+      font-style: normal;
+      font-weight: normal;
+      font-size: $tamano1;
+      line-height: 18px;
+      text-align: center;
+      color: #B1B1B1;
+    }
+  }
+  *{
+    text-align: center;
+  }
+}
+
+.footer{
+  padding: 0% 8% 0% 8%;
+  .nav-item a {
+      font-family: $fuente;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 15px;
+      line-height: 24px;
+      text-align: center;
+      color: $gris!important;
+      text-decoration: none;
+  }
+}
+.card {
+  height: 100%;
+  display: flex;
+  img {
+    margin: auto;
+  }
+}
+.iconsRedes nav a img {
+  height: 25px;
+  margin: auto 5px auto 5px;
+  
+}
+
+
+p.copy {
+  font-family: $fuente;
+  font-style: normal;
+  font-weight: normal;
+  font-size: $tamano1;
+  line-height: 25px;
+  color: $gris;
+  text-align: center;
+  margin-top: 0;
+}
+hr.elhr {
+  /* background: red; */
+  margin: 0px 20px 0px 20px;
+  border: 1px solid;
+  background: linear-gradient(270deg, #FFD014 -2.08%, #FEAF26 8.96%, #FE803F 33.12%, #FD5B54 58.49%, #FC4062 76.34%, #FC306B 92.41%, #FC2A6E 109.11%);
+  border: unset;
+}
+.platform nav {
+  display: flex;
+}
+.carousel-cell {
+  display: flex;
+}
+
+.carousel-cell img {
+  width: auto!important;
+  height: auto!important;
+  margin: auto;
+}
+
+
+.carousel-arrow.carousel-arrow-prev {
+  background: url(../../assets/pages/home/left.png)!important;
+}

@@ -1,0 +1,254 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-row class="headersUrra">
+      <ion-col size="3" class="imgLogo">
+        <img src="../../assets/pages/home/logo.png" alt="">
+      </ion-col>
+      <ion-col size="6">
+        <nav class="nav-1">
+          <a href="https://urraapp.com/v7/#/how-work">¿Cómo funciona?</a>
+          <a href="https://urraapp.com/v7/#/purchase">Comprar</a>
+          <a href="https://urraapp.com/v7/#/travel">Viajar</a>
+          <a href="https://urraapp.com/v7/#/FAQ">Ayuda</a>
+        </nav>
+      </ion-col>
+      <ion-col size="3">
+        <nav class="nav-2">
+          <a href="https://urraapp.com/v7/#/account/dashboard" class="elperfil">
+            <ion-avatar>
+              <img src="../../assets/pages/home/perfil.png" />
+            </ion-avatar>
+          </a>
+          <a (click)="notificacion()">
+            <img src="../../assets/pages/home/noti.png" alt="">
+          </a>
+          <a href="https://urraapp.com/v7/#/messenger">
+            <img src="../../assets/pages/home/mail.png" alt="">
+          </a>
+        </nav>
+      </ion-col>
+    </ion-row>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div id="container">
+    <ion-row class="bannerUrra">
+      <ion-col size="12">
+        <p class="titulo">
+          Compra de cualquier <br>lugar del mundo
+        </p>
+        <p class="desc">La mejor manera de comprar en línea, a un precio más <br> accesible con nuestra comunidad de viajeros.</p>
+        <p class="buscador">
+          <input type="text" placeholder="Pega la URL del producto que deseas comprar " id="buscador">
+        </p>
+        <p class="accion">
+          <button class="btn_btnCrear">Crea tu pedido</button>
+        </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="ultimosPedidos">
+      <ion-col size="12">
+        <p class="seccionTitle">Últimos pedidos </p>
+        <p class="seccionSub">Descubre los últimos pedidos completados por nuestra comunidad y todo lo que han ganado viajando. </p>
+      </ion-col>
+
+
+      <ion-col size="4" class="producto" *ngFor="let i of ultimos">
+        <div class="img" style="background: url(../../assets/pages/home/productos/{{i.img}});">
+          <img src="../../assets/pages/home/avion.png" alt="">
+        </div>
+        <p class="fecha">{{i.fecha}}</p>
+        <ion-row>
+          <ion-col size="6" class="ganador">
+            <ion-col size="12" class="avatar">
+              <ion-avatar class="">
+                <img src="../../assets/pages/home/ganadores/{{i.ganadores.comprador.foto}}" />
+              </ion-avatar>
+            </ion-col>
+           
+            <p class="nombre">{{i.ganadores.comprador.nombre}}</p>
+            <p class="premio">Ganado {{i.ganadores.comprador.ganado}}</p>
+            <p class="nombre tipo">Comprador</p>
+          </ion-col>
+          <ion-col size="6" class="ganador">
+            <ion-col size="12" class="avatar">
+              <ion-avatar class="">
+                <img src="../../assets/pages/home/ganadores/{{i.ganadores.viajero.foto}}" />
+              </ion-avatar>
+            </ion-col>
+            <p class="nombre">{{i.ganadores.viajero.nombre}}</p>
+            <p class="premio">Ahorrado {{i.ganadores.viajero.ganado}}</p>
+            <p class="nombre tipo">Viajero</p>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+
+   
+
+    <ion-row class="funcionamiento">
+      <ion-col size="12">
+        <ion-col size="12">
+          <p class="seccionTitle">¿Cómo funciona?</p>
+          <p class="seccionSub">Urra es la manera más fácil, rápida y económica de comprar lo que más deseas en otros países.</p>
+        </ion-col>
+      </ion-col>
+      <ion-col size="12" class="video">
+          <img (click)="urraVideo()" src="../../assets/pages/home/paly.png" alt="">
+      </ion-col>
+
+      <div style="margin-top: 50px;">
+        <ion-row class="paso" *ngFor="let paso of pasos">
+          <ion-col size="6" class="img" *ngIf="[paso.alinear]==1">
+            <img src="../../assets/pages/home/pasos/{{paso.img}}.png" alt="">
+          </ion-col>
+          <ion-col size="6" class="info">
+            <div>
+              <p class="n"><button>{{paso.paso}}</button></p>
+              <p class="seccionTitle">{{paso.titulo}}</p>
+              <p class="seccionSub">{{paso.desc}}</p>
+            </div>
+            
+            <p></p>
+          </ion-col>
+          <ion-col size="6" class="img" *ngIf="[paso.alinear]==2">
+            <img src="../../assets/pages/home/pasos/{{paso.img}}.png" alt="">
+          </ion-col>
+        </ion-row>
+      </div>
+        
+      <p style="text-align: center;width: 100%;">
+          <button class="btnGrande">Crea tu pedido </button>
+      </p>
+    </ion-row>
+
+    <ion-row class="ProductosBuscados">
+      <ion-col size="12">
+        <ion-col size="12">
+          <p class="seccionTitle">Productos más buscados</p>
+          <p class="seccionSub">Descubre los productos más deseados por nuestra comunidad.</p>
+        </ion-col>
+      </ion-col>
+      <ion-row class="buscados" >
+        <ion-col size="4" class="buscado"*ngFor="let paso of buscados">
+          <div class="contenedor">
+             <div class="img">
+              <img src="../../assets/pages/home/productos/{{paso.img}}" alt="">
+            </div>
+            <div>
+              <p class="seccionTitle">{{paso.titulo}}</p>
+              <p class="seccionSub">{{paso.desc}}</p>
+              <p class="btn">
+                <a href="{{paso.url}}">Compralo</a>
+              </p>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-row>
+
+    <ion-row class="marcas" style="padding: 0% 10% 0% 10%;">
+      <carousel overflowCellsLimit="4">
+        <div class="carousel-cell" *ngFor="let marca of marcas">
+          <img src="../../assets/pages/home/marcas/{{marca.img}}">
+        </div>  
+      </carousel>
+    </ion-row>
+    
+
+    <ion-row class="beneficios">
+      <ion-col size="12">
+        <p class="seccionTitle" style="font-size: 50px;">Beneficios Urra</p>
+      </ion-col>
+
+      <ion-col size ="4" class="beneficio" *ngFor="let b of beneficios">
+         <p class="img">
+            <img src="../../assets/pages/home/beneficios/{{b.img}}" alt="">
+         </p>
+         <p class="elBeneficio">
+            {{b.titulo}}
+         </p>
+         <p class="Descripcion">
+            {{b.desc}}
+         </p>
+      </ion-col>
+    </ion-row>
+
+    <ion-row class="footer">
+      <ion-col size="3" style="text-align: center;">
+         <img src="../../assets/pages/home/Urra-Logo.png" alt="">
+      </ion-col>
+      <ion-col size="7" style="display: flex;">
+        <div class="todo" style="margin: auto 0 auto 0;width: 100%;">
+          <ion-row>
+            <ion-col size="12">
+              <ion-row>
+                <ion-col size="4" class="nav-item">
+                  <a href="#">Sobre nosotros</a>
+                </ion-col>
+                <ion-col size="4" class="nav-item">
+                  <a href="#">¿Como funciona?</a>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+          <ion-row>
+            <ion-col size="12">
+              <ion-row>
+                <ion-col size="4" class="nav-item">
+                  <a href="#">Términos y condiciones</a>
+                </ion-col>
+                <ion-col size="4" class="nav-item">
+                  <a href="#">Política de privacidad</a>
+                </ion-col>
+                <ion-col size="4" class="nav-item">
+                  <a href="#">Centro de ayuda</a>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+        </div>
+        
+      </ion-col>
+      <ion-col size="2">
+        <div class="card">
+          <img src="../../assets/pages/home/card.png" alt="">
+        </div>
+      </ion-col>
+      
+    </ion-row>
+    <ion-col size="12" style="padding: 10px ;">
+      <hr class="elhr">  
+    </ion-col>
+
+    <ion-row class="footer el2">
+      <ion-col size="3" style="text-align: center;" class="iconsRedes">
+         <nav>
+           <a href="#"><img src="../../assets/pages/home/redes/fb.png" alt=""></a>
+           <a href="#"><img src="../../assets/pages/home/redes/instagram.png" alt=""></a>
+           <a href="#"><img src="../../assets/pages/home/redes/pinterest.png" alt=""></a>
+           <a href="#"><img src="../../assets/pages/home/redes/youtube.png" alt=""></a>
+         </nav>
+      </ion-col>
+      <ion-col size="7" style="display: flex;">
+        <div class="todo" style="margin: auto 0 auto 0;width: 100%;">
+          <p class="copy">Copyright © 2019 Urra. All rights reserved.</p>
+        </div>
+        
+      </ion-col>
+      <ion-col size="2">
+        <div class="platform">
+          <nav>
+            <a href="#"><img src="../../assets/pages/home/Frame.svg" alt=""></a>
+            <a href="#"><img src="../../assets/pages/home/Frame (1).svg" alt=""></a>
+          </nav>
+        </div>
+      </ion-col>
+      
+    </ion-row>
+  </div>
+</ion-content>
