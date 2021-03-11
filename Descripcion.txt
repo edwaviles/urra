@@ -1,0 +1,8 @@
+Hola, presento mi prueba de contratación.
+Nombre: Edwin Ernesto Aviles
+
+Decripcion: Este proyecto a sido realizado utilizando IONIC Framework con Angular, 
+elementos de diseño fueron tomados directamente del figma enviado a excepcion del banner superior que al no estar agrupados en figma y no tener permisos con cada elemento del banner lo arme con Adobe Ilustrador.
+
+Nota: Para poder visualizarlo, Se debe ejecutar "npm install" para que descargue los paquetes.
+Saludos.
